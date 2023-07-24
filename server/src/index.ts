@@ -2,6 +2,7 @@ import express, { json } from "express"
 import mongoose from "mongoose"
 import router from "./router/userRouter"
 import cors from 'cors'
+import 'dotenv/config'
 
 const app = express()
 
@@ -17,7 +18,7 @@ app.use(express.json())
 
 app.use("/",router)
 
-const MONGO_URL="mongodb+srv://admin-evara:JUSKM1111a@evara-ecom.il0m4vi.mongodb.net/Todo-TS"
+const MONGO_URL=process.env.MONGO_URL
 mongoose.connect(MONGO_URL).then(()=>{
     console.log("DB Connected")
 }).then(()=>{

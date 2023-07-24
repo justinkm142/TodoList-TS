@@ -21,7 +21,7 @@ const SingleTodo:React.FC<Props> = ({data,handleDelete, handleDone, handleEdit,i
   return (
     <>  
   
-    <Draggable draggableId={data.id.toString()} index={index}> 
+    <Draggable draggableId={data.id.toString()} index={index} key={index}> 
 
 
 

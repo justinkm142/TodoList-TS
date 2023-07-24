@@ -17,16 +17,16 @@ interface Props{
 const DropableComponent:React.FC<Props> = ({todos, setTodos, handleDelete, handleDone, handleEdit}) => {
   return (
     <div className="grid grid-cols-0 md:grid-cols-2 gap-4">
-            <Droppable droppableId='todolist1'> 
+            <Droppable droppableId='todolistAB'> 
                   {(provided)=>(
                       <div ref={provided.innerRef} {...provided.droppableProps}>
-                      <TodoList todos={todos} setTodos={setTodos} handleDelete={handleDelete} handleDone={handleDone} handleEdit={handleEdit}/>
-                {provided.placeholder}
-                </div>
+                        <TodoList todos={todos} setTodos={setTodos} handleDelete={handleDelete} handleDone={handleDone} handleEdit={handleEdit}/>
+                          {provided.placeholder}
+                      </div>
                 )} 
             </Droppable>
 
-            <Droppable droppableId='todolist2'> 
+            <Droppable droppableId='todolistA'> 
                   {(provided)=>(
                       <div ref={provided.innerRef} {...provided.droppableProps}>
                       <TodoList1 todos={todos} setTodos={setTodos} handleDelete={handleDelete} handleDone={handleDone} handleEdit={handleEdit}/>

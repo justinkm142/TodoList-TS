@@ -1,7 +1,7 @@
-import React,{useState} from 'react'
+import React from 'react'
 import { Todo } from '../model.ts'
 import SingleTodo from './SingleTodo.tsx'
-import {Droppable} from 'react-beautiful-dnd'
+
 
 interface Props{
     todos:Todo[]
@@ -11,7 +11,7 @@ interface Props{
     handleEdit:(id:Todo['id'],text:Todo["todo"])=>void
 }
 
-const TodoList:React.FC<Props>= ({todos, setTodos, handleDelete, handleDone, handleEdit}) => {
+const TodoList:React.FC<Props>= ({todos, handleDelete, handleDone, handleEdit}) => {
 
 
 return (
